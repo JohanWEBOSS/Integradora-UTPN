@@ -1,128 +1,202 @@
 <?php include "includes/header.php"; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/UTPN/assets/css/index.css">
     <title>UTPN</title>
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="http://172.16.144.246/integradora-UTPN/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- MODO APP PARA ANDROID E IOS -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="http://172.16.144.246/integradora-UTPN/assets/img/Logo.png">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  background-color: #EDE5D6;
+}
+
+/* ------------------------------- */
+/*   CONTENEDOR PRINCIPAL (MÓVIL)  */
+/* ------------------------------- */
+
+.logos-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    place-items: center;
+}
+
+/* Evita subrayados */
+.logos-container a {
+    text-decoration: none;
+}
+
+/* ------------------------------- */
+/*       ESTILO DE CADA LOGO       */
+/* ------------------------------- */
+
+.logo {
+    width: 140px;
+    height: 140px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.06);
+}
+
+.logo svg {
+    width: 50px;
+    height: 50px;
+    color: #b2842a;
+    margin-bottom: 8px;
+}
+
+.logo p {
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+    border-bottom: none !important;
+    max-width: 100%;
+}
+
+/* ------------------------------- */
+/*       MODO ESCRITORIO           */
+/* ------------------------------- */
+
+@media (min-width: 768px) {
+    .logos-container {
+        max-width: 900px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        place-items: center;
+    }
+
+    .logo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .logo svg {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo p {
+        font-size: 16px;
+    }
+}
+
+/* 🔥 BOTÓN INSTALAR PWA */
+#btnInstalar {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    z-index: 999;
+}
+</style>
+
 </head>
+
 <body>
-    <main>
-    <!-- From Uiverse.io by gharsh11032000 --> 
-<div class="logos-container">
-  <div class="logo"><a href="pages/alumno/becas.php">
-    <svg
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M23 18.9999H22V8.99991H18V6.58569L12 0.585693L6 6.58569V8.99991H2V18.9999H1V20.9999H23V18.9999ZM6 19H4V11H6V19ZM18 11H20V19H18V11ZM11 12H13V19H11V12Z"
-      ></path>
-    </svg>
-    </a>
-    <p>Texto</p>
-  </div>
-  <div class="logo">
-    <svg
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M17 7C13.5705 7 10.6449 9.15804 9.50734 12.1903L11.3805 12.8927C12.2337 10.6185 14.4278 9 17 9C17.6983 9 18.3687 9.11928 18.992 9.33857C21.3265 10.16 23 12.3846 23 15C23 18.3137 20.3137 21 17 21H7C3.68629 21 1 18.3137 1 15C1 12.3846 2.67346 10.16 5.00804 9.33857C5.0027 9.22639 5 9.11351 5 9C5 5.13401 8.13401 2 12 2C15.242 2 17.9693 4.20399 18.7652 7.19539C18.1973 7.0675 17.6065 7 17 7Z"
-      ></path>
-    </svg>
-    <p>Texto</p>
-  </div>
-  <div class="logo">
-    <svg
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M20.0833 10.4999L21.2854 11.2212C21.5221 11.3633 21.5989 11.6704 21.4569 11.9072C21.4146 11.9776 21.3557 12.0365 21.2854 12.0787L11.9999 17.6499L2.71451 12.0787C2.47772 11.9366 2.40093 11.6295 2.54301 11.3927C2.58523 11.3223 2.64413 11.2634 2.71451 11.2212L3.9166 10.4999L11.9999 15.3499L20.0833 10.4999ZM20.0833 15.1999L21.2854 15.9212C21.5221 16.0633 21.5989 16.3704 21.4569 16.6072C21.4146 16.6776 21.3557 16.7365 21.2854 16.7787L12.5144 22.0412C12.1977 22.2313 11.8021 22.2313 11.4854 22.0412L2.71451 16.7787C2.47772 16.6366 2.40093 16.3295 2.54301 16.0927C2.58523 16.0223 2.64413 15.9634 2.71451 15.9212L3.9166 15.1999L11.9999 20.0499L20.0833 15.1999ZM12.5144 1.30864L21.2854 6.5712C21.5221 6.71327 21.5989 7.0204 21.4569 7.25719C21.4146 7.32757 21.3557 7.38647 21.2854 7.42869L11.9999 12.9999L2.71451 7.42869C2.47772 7.28662 2.40093 6.97949 2.54301 6.7427C2.58523 6.67232 2.64413 6.61343 2.71451 6.5712L11.4854 1.30864C11.8021 1.11864 12.1977 1.11864 12.5144 1.30864Z"
-      ></path>
-    </svg>
-    <p>Texto</p>
-  </div>
-  <div class="logo">
-    <svg
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22H2L4.92893 19.0711C3.11929 17.2614 2 14.7614 2 12C2 6.47715 6.47715 2 12 2ZM16 13H8C8 15.2091 9.79086 17 12 17C14.2091 17 16 15.2091 16 13Z"
-      ></path>
-    </svg>
-    <p>Texto</p>
-  </div>
-  <div class="logo">
-    <svg
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M22 9.999V20C22 20.5523 21.5523 21 21 21H13V9.999H22ZM11 15.999V21H3C2.44772 21 2 20.5523 2 20V15.999H11ZM11 3V13.999H2V4C2 3.44772 2.44772 3 3 3H11ZM21 3C21.5523 3 22 3.44772 22 4V7.999H13V3H21Z"
-      ></path>
-    </svg>
-    <p>Texto</p>
-  </div>
-  <div class="logo">
-    <svg
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12 15V17H18V15H12ZM8.41421 12L5.58579 14.8284L7 16.2426L11.2426 12L7 7.75736L5.58579 9.17157L8.41421 12Z"
-      ></path>
-    </svg>
-    <p>Texto</p>
-  </div>
-  <div class="logo">
-    <svg
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M8 4C8 2.34315 9.34315 1 11 1C12.6569 1 14 2.34315 14 4C14 4.35064 13.9398 4.68722 13.8293 5H18C18.5523 5 19 5.44772 19 6V10.1707C19.3128 10.0602 19.6494 10 20 10C21.6569 10 23 11.3431 23 13C23 14.6569 21.6569 16 20 16C19.6494 16 19.3128 15.9398 19 15.8293V20C19 20.5523 18.5523 21 18 21H4C3.44772 21 3 20.5523 3 20V6C3 5.44772 3.44772 5 4 5H8.17071C8.06015 4.68722 8 4.35064 8 4Z"
-      ></path>
-    </svg>
-    <p>Texto</p>
-  </div>
-  <div class="logo">
-    <svg
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M3 6C3 4.34315 4.34315 3 6 3C7.65685 3 9 4.34315 9 6C9 7.30622 8.16519 8.41746 7 8.82929V15.1707C8.16519 15.5825 9 16.6938 9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.6938 3.83481 15.5825 5 15.1707V8.82929C3.83481 8.41746 3 7.30622 3 6ZM15.2929 3.29289C15.6834 2.90237 16.3166 2.90237 16.7071 3.29289L18 4.58579L19.2929 3.29289C19.6834 2.90237 20.3166 2.90237 20.7071 3.29289C21.0976 3.68342 21.0976 4.31658 20.7071 4.70711L19.4142 6L20.7071 7.29289C21.0976 7.68342 21.0976 8.31658 20.7071 8.70711C20.3166 9.09763 19.6834 9.09763 19.2929 8.70711L18 7.41421L16.7071 8.70711C16.3166 9.09763 15.6834 9.09763 15.2929 8.70711C14.9024 8.31658 14.9024 7.68342 15.2929 7.29289L16.5858 6L15.2929 4.70711C14.9024 4.31658 14.9024 3.68342 15.2929 3.29289ZM18 10C18.5523 10 19 10.4477 19 11V15.1707C20.1652 15.5825 21 16.6938 21 18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18C15 16.6938 15.8348 15.5825 17 15.1707V11C17 10.4477 17.4477 10 18 10Z"
-      ></path>
-    </svg>
-    <p>Texto</p>
-  </div>
-  <div class="logo">
-    <svg
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M5.07089 16C5.02417 15.6734 5 15.3395 5 15V14H3V12H5V11C5 10.6605 5.02417 10.3266 5.07089 10H3V8.00001H5.67363C6.28647 6.70996 7.28227 5.6371 8.51412 4.92834L7.46447 3.87869L8.87868 2.46448L10.5621 4.14785C11.0262 4.05095 11.5071 4.00001 12 4.00001C12.4929 4.00001 12.9738 4.05095 13.4379 4.14785L15.1213 2.46448L16.5355 3.87869L15.4859 4.92834C16.7177 5.6371 17.7135 6.70996 18.3264 8.00001H21V10H18.9291C18.9758 10.3266 19 10.6605 19 11V12H21V14H19V15C19 15.3395 18.9758 15.6734 18.9291 16H21V18H18.3264C17.2029 20.365 14.7924 22 12 22C9.2076 22 6.7971 20.365 5.67363 18H3V16H5.07089ZM9 10V12H15V10H9ZM9 14V16H15V14H9Z"
-      ></path>
-    </svg>
-    <p>Texto</p>
-  </div>
-</div>
+
+<main>
+    <div class="logos-container">
+
+        <a href="pages/public/becas.php">
+            <div class="logo">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23 18.9999H22V8.99991H18V6.58569L12 0.585693L6 6.58569V8.99991H2V18.9999H1V20.9999H23V18.9999ZM6 19H4V11H6V19ZM18 11H20V19H18V11ZM11 12H13V19H11V12Z"></path>
+                </svg>
+                <p>Becas</p>
+            </div>
+        </a>
+
+        <a href="pages/public/mapa_calendario.php">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-icon lucide-map"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>
+                <p>Campus</p>
+            </div>
+        </a>
+
+        <a href="pages/public/ChatBot.php">
+            <div class="logo">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.00004C6.48577 2.00004 2 6.48581 2 12.0001C2 14.5989 3.03816 16.9204 4.70817 18.6757L4.08836 21.3918C4.01353 21.7138 4.30138 21.9961 4.62243 21.9213L7.38883 21.2982C9.0716 22.457 11.0089 22.9996 13 22.9996C18.5143 22.9996 23 18.5139 23 12.9996C23 7.48541 18.5143 2.00004 12 2.00004ZM12.0001 20.9996C11.6667 20.9996 11.3333 20.9996 11 20.9996C6.58172 20.9996 3 17.4179 3 12.9996C3 8.58137 6.58172 5.00004 11 5.00004C15.4183 5.00004 19 8.58137 19 12.9996C19 17.4179 15.4183 20.9996 11 20.9996Z"></path>
+                </svg>
+                <p>ChatBot</p>
+            </div>
+        </a>
+
+    </div>
 </main>
 
-</body>
+<button id="btnInstalar" onclick="instalarApp()">Instalar App</button>
+
+<script>
+/* REGISTRO DEL SW — RUTA FIJA CON IP */
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("http://172.16.144.246/integradora-UTPN/sw.js")
+        .then(() => console.log("SW registrado"))
+        .catch(err => console.log("Error SW:", err));
+}
+
+let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    document.getElementById("btnInstalar").style.display = "block";
+});
+
+async function instalarApp() {
+    const btn = document.getElementById("btnInstalar");
+    btn.style.display = "none";
+
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+}
+
+window.addEventListener("appinstalled", () => {
+    document.getElementById("btnInstalar").style.display = "none";
+});
+</script>
+
 <?php include "includes/footer.php"; ?>
+</body>
 </html>

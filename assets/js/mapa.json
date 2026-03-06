@@ -1,0 +1,376 @@
+{
+    "edificios": [
+        {
+            "id": "edificioA",
+            "nombre": "Edificio A",
+            "descripciones": [
+                {
+                    "titulo": "Escolares",
+                    "contenido": "Oficina encargada de la gestión académica de los estudiantes, incluyendo inscripciones y control de materias."
+                },
+                {
+                    "titulo": "Psicología",
+                    "contenido": "Área de atención psicológica para estudiantes, personal docente y administrativo."
+                },
+                {
+                    "titulo": "Enfermería",
+                    "contenido": "Servicio de atención médica básica y primeros auxilios para la comunidad universitaria."
+                },
+                {
+                    "titulo": "Cultura y Deportes / Servicio Social",
+                    "contenido": "Coordinación de actividades culturales, deportivas y programas de servicio social."
+                },
+                {
+                    "titulo": "Servicios Escolares",
+                    "contenido": "Oficina de apoyo administrativo para trámites escolares y entrega de documentos."
+                },
+                {
+                    "titulo": "Vinculación y Prensa/Difusión",
+                    "contenido": "Área dedicada a la relación con empresas, medios y difusión de actividades académicas."
+                }
+            ],
+            "descripcion": "Edificio principal administrativo que alberga los servicios de atención a estudiantes y oficinas administrativas clave.",
+            "color": "#0f0f0f"
+        },
+        {
+            "id": "edificioB",
+            "nombre": "Edificio B",
+            "descripciones": [
+                {
+                    "titulo": "Laboratorio Redes",
+                    "contenido": "Laboratorio especializado en redes de comunicación y telecomunicaciones."
+                },
+                {
+                    "titulo": "Laboratorio Mecatrónica",
+                    "contenido": "Espacio para prácticas de robótica, automatización y sistemas mecatrónicos."
+                },
+                {
+                    "titulo": "Laboratorio Logística",
+                    "contenido": "Laboratorio dedicado a la optimización y gestión de procesos logísticos."
+                },
+                {
+                    "titulo": "Centro STEAM",
+                    "contenido": "Área interdisciplinaria enfocada en Ciencia, Tecnología, Ingeniería, Arte y Matemáticas."
+                },
+                {
+                    "titulo": "Laboratorio Simulación de Proyectos",
+                    "contenido": "Simulación de proyectos reales para la práctica profesional de los estudiantes."
+                },
+                {
+                    "titulo": "Laboratorio de Gestión de Proyectos",
+                    "contenido": "Espacio para la planificación y seguimiento de proyectos académicos y profesionales."
+                }
+            ],
+            "descripcion": "Edificio tecnológico con laboratorios especializados en ingenierías y desarrollo tecnológico.",
+            "color": "#a41919"
+        },
+        {
+            "id": "edificioC",
+            "nombre": "Edificio C",
+            "descripciones": [
+                {
+                    "titulo": "Biblioteca",
+                    "contenido": "Área de consulta y préstamo de libros, revistas, eventos, conferencias y recursos digitales."
+                },
+                {
+                    "titulo": "Caja",
+                    "contenido": "Espacio para pagos y gestión financiera de estudiantes y servicios."
+                },
+                {
+                    "titulo": "Rectoría",
+                    "contenido": "Oficinas administrativas de la dirección general de la universidad."
+                },
+                {
+                    "titulo": "Planeación",
+                    "contenido": "Departamento encargado de la planificación académica y administrativa."
+                },
+                {
+                    "titulo": "Jurídico",
+                    "contenido": "Asesoría legal para la comunidad universitaria y la institución."
+                },
+                {
+                    "titulo": "Finanzas",
+                    "contenido": "Gestión financiera y presupuestal de la universidad."
+                }
+            ],
+            "descripcion": "Edificio central que alberga la biblioteca, rectoría y principales oficinas administrativas.",
+            "color": "#191da4"
+        },
+        {
+            "id": "edificioD",
+            "nombre": "Edificio D",
+            "descripciones": [
+                {
+                    "titulo": "Audiovisual",
+                    "contenido": "Área para proyección de material audiovisual académico."
+                },
+                {
+                    "titulo": "Dirección de Carrera",
+                    "contenido": "Oficina de coordinación académica."
+                },
+                {
+                    "titulo": "Sala de Maestros",
+                    "contenido": "Espacio de trabajo y reuniones para el personal docente."
+                }
+            ],
+            "descripcion": "Edificio académico con salas especializadas para docentes y dirección de carreras.",
+            "color": "#cfdc18"
+        },
+        {
+            "id": "edificioE",
+            "nombre": "Edificio E",
+            "descripciones": [
+                {
+                    "titulo": "Laboratorio Dobot / Robótica Colaborativa",
+                    "contenido": "Laboratorio de robótica colaborativa."
+                },
+                {
+                    "titulo": "Quality Room",
+                    "contenido": "Pruebas de calidad y control de procesos."
+                },
+                {
+                    "titulo": "Laboratorio Manufactura Aditiva",
+                    "contenido": "Impresión 3D y manufactura avanzada."
+                },
+                {
+                    "titulo": "Laboratorio de Arquitectura",
+                    "contenido": "Diseño arquitectónico y proyectos constructivos."
+                },
+                {
+                    "titulo": "Departamento de Infraestructura Informática",
+                    "contenido": "Gestión tecnológica."
+                },
+                {
+                    "titulo": "Laboratorio SMT",
+                    "contenido": "Ensamblaje de circuitos electrónicos."
+                },
+                {
+                    "titulo": "Laboratorio de Internet de las Cosas",
+                    "contenido": "Desarrollo de dispositivos IoT."
+                },
+                {
+                    "titulo": "Sala 3D",
+                    "contenido": "Modelado tridimensional."
+                },
+                {
+                    "titulo": "Laboratorio de Robótica Móvil",
+                    "contenido": "Prácticas con robots móviles."
+                },
+                {
+                    "titulo": "Salón Realidad Virtual",
+                    "contenido": "Área de simulaciones inmersivas."
+                }
+            ],
+            "descripcion": "Edificio de innovación tecnológica con laboratorios de vanguardia para ingenierías.",
+            "color": "#9d13e7"
+        },
+        {
+            "id": "cafeteria",
+            "nombre": "Cafetería",
+            "descripciones": [
+                {
+                    "titulo": "Menú del Día",
+                    "contenido": "Variedad de platillos y bebidas disponibles."
+                },
+                {
+                    "titulo": "Área de Comedores",
+                    "contenido": "Espacios para comer y socializar."
+                }
+            ],
+            "descripcion": "Área de alimentación y descanso para estudiantes y personal.",
+            "color": "#a45719"
+        },
+        {
+            "id": "canchadefutbol",
+            "nombre": "Cancha de Fútbol",
+            "descripciones": [
+                {
+                    "titulo": "Descripción",
+                    "contenido": "Espacio deportivo para la práctica de fútbol."
+                },
+                {
+                    "titulo": "Normativas",
+                    "contenido": "Reglas y horarios de uso."
+                }
+            ],
+            "descripcion": "Cancha de fútbol para actividades deportivas y recreativas.",
+            "color": "#2e7d32"
+        },
+        {
+            "id": "canchadebasquetbol",
+            "nombre": "Cancha de Basquetbol",
+            "descripciones": [
+                {
+                    "titulo": "Descripción",
+                    "contenido": "Espacio deportivo para basquetbol."
+                }
+            ],
+            "descripcion": "Cancha de basquetbol para actividades deportivas.",
+            "color": "#1976d2"
+        },
+        {
+            "id": "canchadevoleibol",
+            "nombre": "Cancha de Voleibol",
+            "descripciones": [
+                {
+                    "titulo": "Descripción",
+                    "contenido": "Espacio deportivo para voleibol."
+                }
+            ],
+            "descripcion": "Cancha de voleibol para actividades deportivas.",
+            "color": "#d32f2f"
+        },
+        {
+            "id": "canchadevoleibolplayero",
+            "nombre": "Cancha de Voleibol Playero",
+            "descripciones": [
+                {
+                    "titulo": "Descripción",
+                    "contenido": "Espacio deportivo para voleibol playero."
+                }
+            ],
+            "descripcion": "Cancha de voleibol playero para actividades deportivas.",
+            "color": "#ff9800"
+        },
+        {
+            "id": "quiosco",
+            "nombre": "Quiosco",
+            "descripciones": [
+                {
+                    "titulo": "Descripción",
+                    "contenido": "Espacio al aire libre para actividades o descanso."
+                }
+            ],
+            "descripcion": "Área de descanso y reunión al aire libre.",
+            "color": "#795548"
+        },
+        {
+            "id": "puntodereunion",
+            "nombre": "Punto de Reunión",
+            "descripciones": [
+                {
+                    "titulo": "Descripción",
+                    "contenido": "Espacio destinado a reuniones en situaciones de emergencia."
+                }
+            ],
+            "descripcion": "Punto de encuentro para emergencias y actividades grupales.",
+            "color": "#607d8b"
+        }
+    ],
+    "eventos": [
+        {
+            "id": 1,
+            "title": "Integradora",
+            "start": "2025-12-08",
+            "backgroundColor": "#9d13a0",
+            "borderColor": "#9d13a0",
+            "extendedProps": {
+                "description": "Proyecto de IRCM41",
+                "tipo": "academico"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Navidad",
+            "start": "2025-12-25",
+            "backgroundColor": "#ff3333",
+            "borderColor": "#ff3333",
+            "extendedProps": {
+                "description": "FELIZ NAVIDAD A TODOS!!!!!",
+                "tipo": "cultural"
+            }
+        }
+    ],
+    "marcadores": [
+        {
+            "id": 1,
+            "nombre": "Edificio A",
+            "lat": 31.766365511367177,
+            "lng": -106.56166338142302,
+            "edificioId": "edificioA"
+        },
+        {
+            "id": 2,
+            "nombre": "Edificio B",
+            "lat": 31.766841645023472,
+            "lng": -106.56102909656026,
+            "edificioId": "edificioB"
+        },
+        {
+            "id": 3,
+            "nombre": "Edificio C",
+            "lat": 31.76627811886781,
+            "lng": -106.56245778374044,
+            "edificioId": "edificioC"
+        },
+        {
+            "id": 4,
+            "nombre": "Edificio D",
+            "lat": 31.766257798593916,
+            "lng": -106.56312940124269,
+            "edificioId": "edificioD"
+        },
+        {
+            "id": 5,
+            "nombre": "Edificio E",
+            "lat": 31.766248767145573,
+            "lng": -106.56389772444955,
+            "edificioId": "edificioE"
+        },
+        {
+            "id": 6,
+            "nombre": "Cafetería",
+            "lat": 31.767125033013915,
+            "lng": -106.56140786196244,
+            "edificioId": "cafeteria"
+        },
+        {
+            "id": 7,
+            "nombre": "Cancha de Fútbol",
+            "lat": 31.766970077979806,
+            "lng": -106.56308318968154,
+            "edificioId": "canchadefutbol"
+        },
+        {
+            "id": 8,
+            "nombre": "Cancha de Voleibol",
+            "lat": 31.766968880896098,
+            "lng": -106.56343654851547,
+            "edificioId": "canchadevoleibol"
+        },
+        {
+            "id": 9,
+            "nombre": "Cancha de Voleibol Playero",
+            "lat": 31.767213023750685,
+            "lng": -106.56247437733018,
+            "edificioId": "canchadevoleibolplayero"
+        },
+        {
+            "id": 10,
+            "nombre": "Cancha de Basquetbol",
+            "lat": 31.766961941341236,
+            "lng": -106.56280712333786,
+            "edificioId": "canchadebasquetbol"
+        },
+        {
+            "id": 11,
+            "nombre": "Quiosco",
+            "lat": 31.766974870070786,
+            "lng": -106.56248066354152,
+            "edificioId": "quiosco"
+        },
+        {
+            "id": 12,
+            "nombre": "Punto de reunión",
+            "lat": 31.766993499754374,
+            "lng": -106.56201627006439,
+            "edificioId": "puntodereunion"
+        }
+    ],
+    "mapaConfig": {
+        "lat": 31.7666,
+        "lng": -106.562487,
+        "zoom": 17
+    },
+    "ultimaActualizacion": "2025-12-08T18:40:59+01:00"
+}
